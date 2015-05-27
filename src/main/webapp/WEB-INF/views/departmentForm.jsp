@@ -18,31 +18,23 @@
 </portlet:actionURL>
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-6">
-            <%--<div class="panel panel-primary">--%>
-                <div class="panel-heading">
-                    <div class="custom">${not empty department.id && department.id!=0? 'Edit Department' : 'Create Department' }</div>
-                </div>
-                <div class="container-fluid">
-                    <form class="form" role="form"
-                          action="${not empty department.id && department.id!=0 ? edit : create}"
-                          method="POST">
-                        <div class="form-group">
-                            <label for="title">Title:</label>
-                            <input type="text" class="form-control" id="title" name="<portlet:namespace />title" value='${department.title}'/>
-                            <input type="hidden" id="id" name="<portlet:namespace />id_dep" value="${not empty department.id? department.id:0}">
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                        <span class="alarma">${message}</span>
-                    </form>
-                </div>
-            <%--</div>--%>
+<div class="panel-heading">
+    <div class="custom">${not empty department.id && department.id!=0? 'Edit Department' : 'Create Department' }</div>
+</div>
+<div class="container-fluid">
+    <form class="form" role="form"
+          action="${not empty department.id && department.id!=0 ? edit : create}"
+          method="POST">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" name="<portlet:namespace />title"
+                   value='${department.title}'/>
+            <input type="hidden" id="id" name="<portlet:namespace />id_dep"
+                   value="${not empty department.id? department.id:0}">
         </div>
-        <div class="col-sm-2"></div>
-    </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        <span class="alarma">${message}</span>
+    </form>
 </div>
 </body>
 </html>
