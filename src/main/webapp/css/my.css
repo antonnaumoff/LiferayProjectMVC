@@ -1,0 +1,46 @@
+body {
+    background: url(/images/bg2.jpg);
+}
+
+div.custom {
+    text-align: center;
+    vertical-align: middle;
+    font-size: x-large;
+}
+
+.table-header {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.my-table-cell {
+    padding: 10px;
+}
+
+.my-table-cell2 {
+    column-span: 3;
+
+}
+
+.my-table-cell3 {
+    width: 5%;
+}
+
+.alarma {
+    color: red;
+}
+
+.error-header {
+    text-align: center;
+    background-color: darkgray;
+}
+
+.error {
+    text-align: center;
+}
+
+table {
+    width: 100% !important;
+}
+
+
