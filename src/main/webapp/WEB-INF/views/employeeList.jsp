@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <%--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">--%>
 </head>
 <body>
 
@@ -29,7 +29,7 @@
 <div class="panel-heading">
     <div class="custom">Employee List</div>
 </div>
-<table class="table-striped">
+<table class="table-hover">
     <thead>
     <tr>
         <td class="table-header">Title</td>
@@ -41,7 +41,7 @@
             <form action="${create}" method="post">
                 <input type="hidden" name="<portlet:namespace/>id_dep" value="${id_dep}"/>
                 <button type="submit" class="btn btn-default btn-lg">
-                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="icon-plus"></span>
                 </button>
             </form>
         </td>
@@ -50,7 +50,7 @@
             <form action="${listDepartments}" method="post">
                 <input type="hidden" name="<portlet:namespace/>id_dep" value="${id_dep}"/>
                 <button type="submit" class="btn btn-default btn-lg">
-                    <span class="glyphicon glyphicon-th-list"></span>
+                    <span class="icon-list"></span>
                 </button>
             </form>
         </td>
@@ -75,7 +75,7 @@
                     <input type="hidden" name="<portlet:namespace/>id" value="${emp.id}"/>
                     <input type="hidden" name="<portlet:namespace/>id_dep" value="${id_dep}">
                     <button type="submit" class="btn btn-default btn-lg">
-                        <span class="glyphicon glyphicon-remove"></span>
+                        <span class="icon-remove"></span>
                     </button>
                 </form>
             </td>
@@ -84,7 +84,7 @@
                 <form action="${edit}" method="post">
                     <input type="hidden" name="<portlet:namespace/>id" value="${emp.id}"/>
                     <button type="submit" class="btn btn-default btn-lg">
-                        <span class="glyphicon glyphicon-pencil"></span>
+                        <span class="icon-pencil"></span>
                     </button>
                 </form>
             </td>

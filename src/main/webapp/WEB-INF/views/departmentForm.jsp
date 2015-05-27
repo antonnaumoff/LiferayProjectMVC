@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/portlet" prefix="portlet" %>
 <html>
 <head>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <%--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">--%>
 </head>
 <body>
 
