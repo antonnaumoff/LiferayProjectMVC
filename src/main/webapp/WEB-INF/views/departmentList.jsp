@@ -28,71 +28,61 @@
     <portlet:param name="action" value="listEmployees"/>
 </portlet:renderURL>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8">
-            <%--<div class="panel panel-primary">--%>
-                <div class="panel-heading">
-                    <div class="custom">Departments List</div>
-                </div>
-                <table class="table-striped">
-                    <thead>
-                    <tr>
-                        <td class="table-header">Title</td>
-                        <td class="my-table-cell3"></td>
-                        <td class="my-table-cell3"></td>
-                        <td class="my-table-cell3">
-                            <form action="${create}" method="post">
-                                <button type="submit" class="btn btn-default btn-lg">
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <c:forEach var="dep" items="${department}">
-                        <tr>
-                            <td class="my-table-cell"><c:out value="${dep.title}"/></td>
 
-                            <td class="my-table-cell3">
-                                <form action="${delete}" method="post">
-                                    <input type="hidden" name="<portlet:namespace/>id_dep" value="${dep.id}"/>
-                                    <button type="submit" class="btn btn-default btn-lg">
-                                        <span class="glyphicon glyphicon-remove"></span>
-                                    </button>
-                                </form>
-                            </td>
-                            <td class="my-table-cell3">
-                                <form action="${edit}" method="post">
-                                    <input type="hidden" name="<portlet:namespace/>id_dep" value="${dep.id}"/>
-                                    <button type="submit" class="btn btn-default btn-lg">
-                                        <span class="glyphicon glyphicon-pencil"></span>
-                                    </button>
-                                </form>
-
-                            </td>
-
-                            <td class="my-table-cell3">
-                                <form action="${listEmployee}" method="post">
-                                    <input type="hidden" name="<portlet:namespace/>id_dep" value="${dep.id}"/>
-                                    <button type="submit" class="btn btn-default btn-lg">
-                                        <span class="glyphicon glyphicon-th-list"></span>
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                    </c:forEach>
-
-                    </tbody>
-                </table>
-            </div>
-        <%--</div>--%>
-        <div class="col-sm-2"></div>
-    </div>
+<div class="panel-heading">
+    <div class="custom">Departments List</div>
 </div>
-</div>
+<table class="table-striped">
+    <thead>
+    <tr>
+        <td class="table-header">Title</td>
+        <td class="my-table-cell3"></td>
+        <td class="my-table-cell3"></td>
+        <td class="my-table-cell3">
+            <form action="${create}" method="post">
+                <button type="submit" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </form>
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="dep" items="${department}">
+        <tr>
+            <td class="my-table-cell"><c:out value="${dep.title}"/></td>
+
+            <td class="my-table-cell3">
+                <form action="${delete}" method="post">
+                    <input type="hidden" name="<portlet:namespace/>id_dep" value="${dep.id}"/>
+                    <button type="submit" class="btn btn-default btn-lg">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </form>
+            </td>
+            <td class="my-table-cell3">
+                <form action="${edit}" method="post">
+                    <input type="hidden" name="<portlet:namespace/>id_dep" value="${dep.id}"/>
+                    <button type="submit" class="btn btn-default btn-lg">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                </form>
+
+            </td>
+
+            <td class="my-table-cell3">
+                <form action="${listEmployee}" method="post">
+                    <input type="hidden" name="<portlet:namespace/>id_dep" value="${dep.id}"/>
+                    <button type="submit" class="btn btn-default btn-lg">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                    </button>
+                </form>
+            </td>
+        </tr>
+    </c:forEach>
+
+    </tbody>
+</table>
 
 </body>
 </html>
