@@ -7,27 +7,17 @@
     <link rel="stylesheet" href="<c:url value="/css/my.css"/>" type="text/css">
 </head>
 <body>
-<div class="row">
-    <div class="col-sm-3">
-    </div>
-    <div class="col-sm-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="error"><p>
 
-                    <div class="custom">Ooops... Page not found</div>
+<div class="panel-heading">
+    <div class="error"><p>
 
-                    <p></div>
-            </div>
-            <div class="alarma">
-                <h3><p class="error">${message}</p></h3>
-            </div>
+        <div class="custom">Ooops... Page not found</div>
 
-        </div>
-
-    </div>
-    <div class="col-sm-3">
-    </div>
+        <p></div>
 </div>
+<div class="alarma">
+    <h3><p class="error">${message}</p></h3>
+</div>
+
 </body>
 </html>
