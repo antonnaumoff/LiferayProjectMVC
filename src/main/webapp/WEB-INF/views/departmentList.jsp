@@ -28,7 +28,7 @@
     <portlet:param name="action" value="listEmployees"/>
 </portlet:renderURL>
 
-
+<%--new version--%>
 <div class="panel-heading">
     <div class="custom">Departments List</div>
 </div>
